@@ -1,0 +1,10 @@
+﻿Rules:
+A -> Z
+B -> Z
+C -> Z
+
+Facts:
+C
+
+Goal:
+Y

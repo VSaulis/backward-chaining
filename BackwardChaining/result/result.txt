@@ -1,0 +1,11 @@
+1. Depth : 1. Rule consiquent found in goals. New goals : AD
+2. Depth : 1. Rule consiquent not found in goals.
+3. Depth : 1. Rule consiquent not found in goals.
+4. Depth : 1. Rule consiquent not found in goals.
+5. Depth : 2. Rule consiquent found in goals. New goals : BD
+6. Depth : 2. Rule consiquent not found in goals.
+7. Depth : 2. Rule consiquent not found in goals.
+8. Depth : 2. Rule consiquent not found in goals.
+9. Depth : 3. Rule consiquent found in goals. New goals : CD
+10. Depth : 3. All goals found in facts list.
+Success
