@@ -1,8 +1,8 @@
 ﻿Rules:
-A, D -> Z
-B, D -> Z
-C, D -> Z
-C, E -> Y
+R1. A, D -> Z
+R2. B, D -> Z
+R3. C, D -> Z
+R4. C, E -> Y
 
 Facts:
 C, D

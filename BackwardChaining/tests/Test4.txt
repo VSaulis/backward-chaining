@@ -1,7 +1,7 @@
 Rules:
-C, D -> Z
-T -> C
-T -> Z
+R1. C, D -> Z
+R2. T -> C
+R3. T -> Z
 
 Facts:
 T

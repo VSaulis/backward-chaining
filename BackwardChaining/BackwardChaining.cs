@@ -9,6 +9,7 @@ namespace ForwardChaining {
         private readonly List<Rule> _rules;
         private readonly List<char> _facts;
         private readonly List<char> _goals;
+        private readonly List<Rule> _usedRules;
         private int _step;
 
         public BackwardChaining(string filename) {
@@ -16,6 +17,7 @@ namespace ForwardChaining {
             _rules = new List<Rule>();
             _facts = new List<char>();
             _goals = new List<char>();
+            _usedRules = new List<Rule>();
             ReadFile(filename);
         }
 
@@ -23,11 +25,13 @@ namespace ForwardChaining {
             return Iterate(_goals, _rules, 1);
         }
 
+        public List<Rule> GetUsedRules() {
+            return _usedRules;
+        }
+
         public bool Iterate(List<char> goals, List<Rule> rules, int depth) {
 
             if (!goals.Except(_facts).Any()) {
-                _step++;
-                Log.AddToLog(_step + ". Depth : " + depth + ". All goals found in facts list.");
                 return true;
             }
 
@@ -44,7 +48,8 @@ namespace ForwardChaining {
 
                     var tempRules = rules.Except(new List<Rule>{rule}).ToList();
                     _step++;
-                    Log.AddToLog(_step + ". Depth : " + depth + ". Rule consiquent found in goals. New goals : " + new String(tempGoals.ToArray()));
+                    Log.AddToLog(_step + ". Depth : " + depth + ". Rule used : R" + rule.GetNumber() + ". Result : New goals : " + new String(tempGoals.ToArray()));
+                    _usedRules.Add(rule);
 
                     if (Iterate(tempGoals, tempRules, depth++)) {
                         return true;
@@ -52,7 +57,7 @@ namespace ForwardChaining {
                 }
                 else {
                     _step++;
-                    Log.AddToLog(_step + ". Depth : " + depth + ". Rule consiquent not found in goals.");
+                    Log.AddToLog(_step + ". Depth : " + depth + ". Rule used : R"+ rule.GetNumber() +". Result : Rule consiquent not found in goals.");
                 }
             }
             return false;
@@ -61,6 +66,7 @@ namespace ForwardChaining {
 
         private void ReadFile(string filename) {
             string status = "";
+            int ruleNumber = 0;
 
             List<string> lines = File.ReadAllLines(filename).ToList();
             foreach (var line in lines) {
@@ -81,7 +87,8 @@ namespace ForwardChaining {
 
                     if (status == "Rules") {
                         if (!String.IsNullOrEmpty(line)) {
-                            Rule rule = new Rule(line);
+                            ruleNumber++;
+                            Rule rule = new Rule(line, ruleNumber);
                             _rules.Add(rule);
                         }
                     }

@@ -1,12 +1,12 @@
 Rules:
-E -> G
-F -> B
-G -> Z
-A -> G
-A -> B
-B -> C
-C -> D
-D -> Z
+R1. E -> G
+R2. F -> B
+R3. G -> Z
+R4. A -> G
+R5. A -> B
+R6. B -> C
+R7. C -> D
+R8. D -> Z
 
 Facts:
 A

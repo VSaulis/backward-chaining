@@ -1,9 +1,9 @@
 Rules:
-A -> Z
-B -> A
-A, C -> B
-T -> B
-T -> C
+R1. A -> Z
+R2. B -> A
+R3. A, C -> B
+R4. T -> B
+R5. T -> C
 
 Facts:
 T

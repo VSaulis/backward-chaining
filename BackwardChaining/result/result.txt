@@ -1,11 +1,22 @@
-1. Depth : 1. Rule consiquent found in goals. New goals : AD
-2. Depth : 1. Rule consiquent not found in goals.
-3. Depth : 1. Rule consiquent not found in goals.
-4. Depth : 1. Rule consiquent not found in goals.
-5. Depth : 2. Rule consiquent found in goals. New goals : BD
-6. Depth : 2. Rule consiquent not found in goals.
-7. Depth : 2. Rule consiquent not found in goals.
-8. Depth : 2. Rule consiquent not found in goals.
-9. Depth : 3. Rule consiquent found in goals. New goals : CD
-10. Depth : 3. All goals found in facts list.
+1. Depth : 1. Rule used : R1. Result : Rule consiquent not found in goals.
+2. Depth : 1. Rule used : R2. Result : Rule consiquent not found in goals.
+3. Depth : 1. Rule used : R3. Result : New goals : D
+4. Depth : 1. Rule used : R1. Result : Rule consiquent not found in goals.
+5. Depth : 1. Rule used : R2. Result : Rule consiquent not found in goals.
+6. Depth : 1. Rule used : R4. Result : New goals : C
+7. Depth : 1. Rule used : R1. Result : Rule consiquent not found in goals.
+8. Depth : 1. Rule used : R2. Result : Rule consiquent not found in goals.
+9. Depth : 1. Rule used : R5. Result : Rule consiquent not found in goals.
+10. Depth : 1. Rule used : R6. Result : Rule consiquent not found in goals.
+11. Depth : 1. Rule used : R7. Result : New goals : B
+12. Depth : 1. Rule used : R1. Result : New goals : F
+13. Depth : 1. Rule used : R2. Result : Rule consiquent not found in goals.
+14. Depth : 1. Rule used : R5. Result : Rule consiquent not found in goals.
+15. Depth : 1. Rule used : R6. Result : Rule consiquent not found in goals.
+16. Depth : 1. Rule used : R8. Result : Rule consiquent not found in goals.
+17. Depth : 2. Rule used : R2. Result : Rule consiquent not found in goals.
+18. Depth : 2. Rule used : R5. Result : Rule consiquent not found in goals.
+19. Depth : 2. Rule used : R6. Result : New goals : A
+--------------------End--------------------
+Rules path : R3 -> R4 -> R7 -> R1 -> R6
 Success

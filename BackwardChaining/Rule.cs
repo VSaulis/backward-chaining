@@ -7,33 +7,38 @@ namespace ForwardChaining {
         private readonly List<char> _antecedent;
         private readonly List<char> _consequent;
         private bool _isUsed;
+        private readonly int _number;
 
-        public Rule(string rule) {
+        public Rule(string rule, int number) {
+            _number = number;
             _isUsed = false;
             _antecedent = new List<char>();
             _consequent = new List<char>();
             StringToRule(rule);
         }
 
+        public int GetNumber() {
+            return _number;
+        }
+
         private void StringToRule(string rule) {
             bool isAntecedent = true;
             foreach (char c in rule) {
-
                 if (c == '>') {
                     isAntecedent = false;
                 }
 
                 if (Char.IsLetter(c)) {
-
                     char letter = Char.ToUpper(c);
 
-                    if (isAntecedent == true) {
-                        _antecedent.Add(letter);
+                    if (letter != 'R') {
+                        if (isAntecedent == true) {
+                            _antecedent.Add(letter);
+                        }
+                        else {
+                            _consequent.Add(letter);
+                        }
                     }
-                    else {
-                        _consequent.Add(letter);
-                    }
-
                 }
             }
         }
