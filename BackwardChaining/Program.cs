@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace ForwardChaining
-{
+namespace BackwardChaining {
     public class Program
     {
         static void Main(string[] args) {

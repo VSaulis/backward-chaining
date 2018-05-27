@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ForwardChaining {
+namespace BackwardChaining {
     public class Rule {
         private readonly List<char> _antecedent;
         private readonly List<char> _consequent;

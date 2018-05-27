@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ForwardChaining {
+namespace BackwardChaining {
     public class BackwardChaining {
         private readonly List<Rule> _rules;
         private readonly List<char> _facts;
