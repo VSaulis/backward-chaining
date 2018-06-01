@@ -5,13 +5,13 @@ namespace BackwardChaining {
     {
         static void Main(string[] args) {
             string path = @"C:\Users\Vytautas\Desktop\AI\BackwardChaining\BackwardChaining\tests\";
-            BackwardChaining backwardChaining = new BackwardChaining(path+"Test7.txt");
+            BackwardChaining backwardChaining = new BackwardChaining(path+"Test1.txt");
             if (backwardChaining.Start()) {
                 string rulesPath = "";
 
-                for (int i = 0; i < backwardChaining.GetUsedRules().Count; i++) {
+                for (int i = backwardChaining.GetUsedRules().Count - 1; i >= 0 ; i--) {
                     rulesPath += "R" + backwardChaining.GetUsedRules()[i].GetNumber();
-                    if (i != backwardChaining.GetUsedRules().Count - 1) {
+                    if (i != 0) {
                         rulesPath += " -> ";
                     }
                 }
@@ -24,9 +24,9 @@ namespace BackwardChaining {
             else {
                 string rulesPath = "";
 
-                for (int i = 0; i < backwardChaining.GetUsedRules().Count; i++) {
+                for (int i = backwardChaining.GetUsedRules().Count -1 ; i >= 0; i--) {
                     rulesPath += "R" + backwardChaining.GetUsedRules()[i].GetNumber();
-                    if (i != backwardChaining.GetUsedRules().Count - 1) {
+                    if (i != 0) {
                         rulesPath += " -> ";
                     }
                 }
